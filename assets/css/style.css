@@ -9,3 +9,81 @@
 a {
     text-decoration: none;
 }
+
+body {
+    font-family: sans-serif;
+    background: #fff666;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.box {
+    width: 800px;
+    height: auto;
+    min-height: 200px;
+
+    margin: 150px auto;
+
+    background: #e91e63;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box ul {
+    display: flex;
+    background: #fff;
+}
+
+.box ul li {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.box ul li i {
+    color: #141414;
+    font-size: 36px;
+}
+
+.box ul li h4 {
+    color: #141414;
+    font-size: 18px;
+}
+
+.box ul li.active i,
+.box ul li.active h4,
+.box ul li.active {
+    color: #e91e63;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content p {
+    text-align: justify;
+    color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+    .box {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .box ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box ul li {
+        width: 50%;
+    }
+}
