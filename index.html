@@ -1,81 +1,644 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#e9dfc8" />
+        <meta
+            name="description"
+            content="The Wanted Gazette — news from the wildest corners of the frontier."
+        />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+            rel="stylesheet"
+        />
 
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <title>Project</title>
+
+        <title>The Gazette — Special Daily News</title>
     </head>
 
     <body>
-        <div class="box">
-            <ul>
-                <li id="tab-one" class="active">
-                    <i class="fa-brands fa-accusoft"></i>
+        <div class="bg"></div>
 
-                    <h4>Soft</h4>
-                </li>
+        <main class="newspaper">
+            <!-- MASTHEAD -->
+            <header class="masthead">
+                <div class="masthead-top">
+                    <span>THE INDEPENDENT FRONTIER PRESS</span>
+                    <span>EST. 1887 · VOL. 09</span>
+                    <span>PRICE: 5 CENTS</span>
+                </div>
 
-                <li id="tab-two">
-                    <i class="fa-brands fa-globe"></i>
+                <div class="masthead-brand">
+                    <span class="brand-side">THE DAILY<br />FRONTIER</span>
 
-                    <h4>Globe</h4>
-                </li>
+                    <a href="#" class="brand-name">
+                        THE SOUTH DAKOTA
+                        <span>GAZETTE</span>
+                    </a>
 
-                <li id="tab-three">
-                    <i class="fa-solid fa-headphones"></i>
+                    <span class="brand-side brand-side-right">
+                        NO. 0484<br />EXTRA EDITION
+                    </span>
+                </div>
 
-                    <h4>Headphones</h4>
-                </li>
+                <div class="masthead-bottom">
+                    <span>GOOD NEWS TRAVELS FAST.</span>
+                    <span>BAD NEWS TRAVELS FASTER.</span>
+                    <span>MONDAY, NOVEMBER 16, 1887</span>
+                </div>
+            </header>
 
-                <li id="tab-four">
-                    <i class="fa-solid fa-music"></i>
+            <!-- NAVIGATION -->
 
-                    <h4>Music</h4>
-                </li>
-            </ul>
+            <nav class="newspaper-nav" aria-label="Newspaper sections">
+                <div class="nav-label">EXPLORE THE EDITION</div>
 
-            <div class="content">
-                <div id="tab-one-content-box" class="hide active">
+                <div
+                    class="nav-tabs"
+                    role="tablist"
+                    aria-label="Gazette sections"
+                >
+                    <button
+                        class="nav-tab active"
+                        id="tab-front-page"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="front-page"
+                        tabindex="0"
+                        data-tab="front-page"
+                    >
+                        <span>01</span>
+                        Front page
+                    </button>
+
+                    <button
+                        class="nav-tab"
+                        id="tab-wanted"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="wanted"
+                        tabindex="-1"
+                        data-tab="wanted"
+                    >
+                        <span>02</span>
+                        Wanted
+                    </button>
+
+                    <button
+                        class="nav-tab"
+                        id="tab-stories"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="stories"
+                        tabindex="-1"
+                        data-tab="stories"
+                    >
+                        <span>03</span>
+                        The stories
+                    </button>
+
+                    <button
+                        class="nav-tab"
+                        id="tab-archive"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="archive"
+                        tabindex="-1"
+                        data-tab="archive"
+                    >
+                        <span>04</span>
+                        Archive
+                    </button>
+                </div>
+
+                <div class="nav-edition">ISSUE № 0484</div>
+            </nav>
+
+            <!-- FRONT PAGE -->
+            <section class="front-page" id="front-page" role="tabpanel">
+                <div class="breaking-news">
+                    <span class="breaking-dot"></span>
+                    <span>BREAKING NEWS</span>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A aspernatur ipsam inventore unde
-                        voluptatibus hic asperiores temporibus totam explicabo, eius, velit, blanditiis odio. Sint, ea
-                        veniam possimus ullam sed itaque nobis fugiat!
+                        THE MOST WANTED OUTLAW HAS BEEN SPOTTED NEAR DUSTY
+                        CREEK!
                     </p>
                 </div>
 
-                <div id="tab-two-content-box" class="hide">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe sit rem culpa et consectetur,
-                        laborum deserunt commodi fuga ipsum error nihil cum quaerat, similique aliquam tempore sequi
-                        totam.
-                    </p>
+                <!-- HERO HEADLINE -->
+                <div class="hero-headline">
+                    <div class="headline-copy">
+                        <span class="section-kicker">
+                            SPECIAL FRONTIER REPORT · PAGE 01
+                        </span>
+
+                        <h1>
+                            WANTED
+                            <span>DEAD OR ALIVE.</span>
+                        </h1>
+
+                        <p class="headline-description">
+                            A notorious troublemaker is back in town. The
+                            sheriff has issued a warning to every citizen across
+                            the county.
+                        </p>
+
+                        <div class="headline-meta">
+                            <span>BY J. WILDER</span>
+                            <span>·</span>
+                            <span>3 MIN READ</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-stamp">EXTRA<br />EXTRA!</div>
                 </div>
 
-                <div id="tab-three-content-box" class="hide">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, rerum aliquid totam incidunt
-                        excepturi dignissimos, reprehenderit dolor, itaque sint amet magni temporibus numquam? Omnis,
-                        nemo corrupti ipsam tenetur blanditiis dolorum quaerat dolor vitae. Error totam repudiandae sit
-                        consectetur?
-                    </p>
+                <!-- FEATURED STORY -->
+                <div class="featured-layout">
+                    <article class="featured-article">
+                        <div class="article-topline">
+                            <span>THE BIG STORY</span>
+                            <span>01 / 04</span>
+                        </div>
+
+                        <div class="character-scene">
+                            <div class="character-sun"></div>
+                            <div class="character-shadow"></div>
+
+                            <img src="./assets/images/card1.png" alt="" />
+
+                            <div class="character-label">
+                                <span>THE OUTLAW</span>
+                                <strong>UNKNOWN IDENTITY</strong>
+                            </div>
+                        </div>
+
+                        <div class="featured-caption">
+                            <span>ARTIST'S IMPRESSION</span>
+                            <span>FRONTIER COUNTY · 1887</span>
+                        </div>
+
+                        <div class="featured-copy">
+                            <h2>The stranger who<br />shook the whole town.</h2>
+
+                            <p>
+                                Witnesses describe a mysterious figure wearing a
+                                red bandana and a rather suspicious smile.
+                                Authorities advise keeping your doors locked and
+                                your horses close.
+                            </p>
+
+                            <a href="#" class="read-link">
+                                READ THE FULL REPORT
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- SIDEBAR -->
+                    <aside class="front-sidebar">
+                        <article class="sidebar-story">
+                            <span class="story-number">STORY NO. 002</span>
+
+                            <div class="sidebar-icon">✦</div>
+
+                            <span class="section-kicker">TOWN NEWS</span>
+
+                            <h3>
+                                Saloon closes early after mysterious incident.
+                            </h3>
+
+                            <p>
+                                Three broken chairs, one missing piano and
+                                absolutely no witnesses.
+                            </p>
+
+                            <span class="story-author">BY M. CARTER</span>
+                        </article>
+
+                        <article class="wanted-mini">
+                            <div class="wanted-mini-top">OFFICIAL NOTICE</div>
+
+                            <span class="wanted-mini-label">WANTED</span>
+
+                            <div class="wanted-mini-symbol">?</div>
+
+                            <h3>THE PIANO THIEF</h3>
+
+                            <p>LAST SEEN NEAR THE OLD SALOON</p>
+
+                            <div class="reward">
+                                <span>REWARD</span>
+                                <strong>$250</strong>
+                            </div>
+                        </article>
+
+                        <article class="weather-story">
+                            <span class="section-kicker">TODAY'S FORECAST</span>
+
+                            <div class="weather-main">
+                                <span class="weather-icon">☀</span>
+                                <strong>32°</strong>
+                            </div>
+
+                            <p>HOT, DUSTY & VERY SUSPICIOUS.</p>
+
+                            <span class="weather-location"
+                                >DUSTY CREEK COUNTY</span
+                            >
+                        </article>
+
+                        <article class="sidebar-story">
+                            <h3>Sunday Lunch at Mickey Mouse’s</h3>
+
+                            <div class="sidebar-img-wrap">
+                                <img src="./assets/images/video1.gif" alt="" />
+                            </div>
+
+                            <span class="story-author">BY M. Mickey</span>
+                        </article>
+
+                        <article class="sidebar-story">
+                            <h3>Mr. Papay has saved the city once again.</h3>
+
+                            <div class="sidebar-img-wrap">
+                                <img src="./assets/images/video2.gif" alt="" />
+                            </div>
+
+                            <span class="story-author">BY L. Meloni</span>
+                        </article>
+                    </aside>
                 </div>
 
-                <div id="tab-four-content-box" class="hide">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde veniam placeat est quia eum,
-                        ullam numquam consequatur molestias impedit, quibusdam quaerat voluptatum aliquam sunt enim esse
-                        corporis minus. Accusantium, delectus!
-                    </p>
-                </div>
-            </div>
-        </div>
+                <!-- BOTTOM STRIP -->
+                <div class="bottom-stories">
+                    <article>
+                        <span>01 — LOCAL</span>
+                        <h3>Wanted horse returns home without its owner.</h3>
+                    </article>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                    <article>
+                        <span>02 — CULTURE</span>
+                        <h3>Who makes the best coffee in the frontier?</h3>
+                    </article>
+
+                    <article>
+                        <span>03 — NOTICE</span>
+                        <h3>Beware of suspiciously friendly strangers.</h3>
+                    </article>
+                </div>
+            </section>
+
+            <!-- OTHER SECTIONS — CONTENT COMING NEXT -->
+
+            <!-- WANTED SECTION -->
+            <section
+                class="tab-page wanted-page"
+                id="wanted"
+                role="tabpanel"
+                aria-labelledby="tab-wanted"
+                hidden
+            >
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">
+                            OFFICIAL SHERIFF'S RECORDS · 1887
+                        </span>
+                        <h2>THE MOST <span>WANTED.</span></h2>
+                        <p>
+                            Dangerous characters. Unfinished business. Generous
+                            rewards.
+                        </p>
+                    </div>
+
+                    <div class="section-number">PAGE 02</div>
+                </div>
+
+                <div class="wanted-banner">
+                    <span>PUBLIC NOTICE</span>
+                    <strong>HAVE YOU SEEN THESE PEOPLE?</strong>
+                    <span>REPORT ALL SIGHTINGS TO THE SHERIFF</span>
+                </div>
+
+                <div class="wanted-grid">
+                    <article class="wanted-card wanted-featured">
+                        <div class="poster-top">
+                            <span>NO. 001</span>
+                            <span>HIGH PRIORITY</span>
+                        </div>
+
+                        <div class="poster-art">
+                            <span class="poster-sun"></span>
+                            <div class="poster-person person-one">
+                                <img src="./assets/images/card2.png" alt="" />
+                            </div>
+                            <span class="poster-question">?</span>
+                        </div>
+
+                        <div class="poster-bottom">
+                            <span class="poster-kicker">WANTED</span>
+                            <h3>THE ORANGE BANDIT</h3>
+                            <p>
+                                Armed with a suspicious smile and an extremely
+                                fast horse.
+                            </p>
+
+                            <div class="poster-reward">
+                                <span>REWARD</span>
+                                <strong>$5,000</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="wanted-card">
+                        <div class="poster-top">
+                            <span>NO. 002</span>
+                            <span>AT LARGE</span>
+                        </div>
+
+                        <div class="poster-art outlaw-art">
+                            <span class="poster-sun"></span>
+                            <div class="poster-person person-two">
+                                <img src="./assets/images/card3.png" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="poster-bottom">
+                            <span class="poster-kicker">WANTED</span>
+                            <h3>PIANO BAND</h3>
+                            <p>
+                                Known for stealing pianos and leaving terrible
+                                music behind.
+                            </p>
+
+                            <div class="poster-reward">
+                                <span>REWARD</span>
+                                <strong>$850</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="wanted-card">
+                        <div class="poster-top">
+                            <span>NO. 003</span>
+                            <span>VERY DANGEROUS</span>
+                        </div>
+
+                        <div class="poster-art poster-art-blue">
+                            <span class="poster-sun"></span>
+                            <div class="poster-person person-three">
+                                <img src="./assets/images/card4.png" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="poster-bottom">
+                            <span class="poster-kicker">WANTED</span>
+                            <h3>MISS TROUBLE</h3>
+                            <p>
+                                Last seen leaving town with the sheriff's money.
+                            </p>
+
+                            <div class="poster-reward">
+                                <span>REWARD</span>
+                                <strong>$2,400</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="wanted-footnote">
+                    <span>THE SHERIFF'S DEPARTMENT</span>
+                    <span>DEAD OR ALIVE · FRONTIER COUNTY</span>
+                </div>
+            </section>
+
+            <!-- STORIES SECTION -->
+            <section
+                class="tab-page stories-page"
+                id="stories"
+                role="tabpanel"
+                aria-labelledby="tab-stories"
+                hidden
+            >
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker"
+                            >FROM OUR REPORTERS · EDITION 0484</span
+                        >
+                        <h2>STRANGE <span>HAPPENINGS.</span></h2>
+                        <p>Little towns. Big trouble. Stories worth telling.</p>
+                    </div>
+
+                    <div class="section-number">PAGE 03</div>
+                </div>
+
+                <article class="main-story">
+                    <div class="main-story-copy">
+                        <span class="story-category"
+                            >EXCLUSIVE REPORT · DUSTY CREEK</span
+                        >
+
+                        <h3>
+                            The night the entire town heard a piano playing by
+                            itself.
+                        </h3>
+
+                        <p>
+                            It started at exactly midnight. The saloon was
+                            empty, the doors were locked, and yet the old piano
+                            played a tune nobody in town recognized.
+                        </p>
+
+                        <div class="story-byline">
+                            <span>BY M. CARTER</span>
+                            <span>6 MIN READ</span>
+                        </div>
+                    </div>
+
+                    <div class="story-illustration piano-scene">
+                        <div class="piano-moon">☾</div>
+                        <div class="piano-object">
+                            <span class="piano-lid"></span>
+                            <span class="piano-keys"></span>
+                            <span class="piano-legs"></span>
+                        </div>
+                        <span class="music-note note-one">♪</span>
+                        <span class="music-note note-two">♫</span>
+                        <span class="scene-caption"
+                            >12:00 AM · THE OLD SALOON</span
+                        >
+                    </div>
+                </article>
+
+                <div class="story-list">
+                    <article class="story-row">
+                        <span class="story-index">01</span>
+                        <div>
+                            <span class="story-category">LOCAL NEWS</span>
+                            <h3>
+                                Three horses escape. One returns wearing a hat.
+                            </h3>
+                            <p>
+                                The sheriff refuses to comment on the incident.
+                            </p>
+                        </div>
+                        <span class="story-arrow">↗</span>
+                    </article>
+
+                    <article class="story-row">
+                        <span class="story-index">02</span>
+                        <div>
+                            <span class="story-category">TOWN LIFE</span>
+                            <h3>
+                                New bakery opens. Sheriff declares it a national
+                                treasure.
+                            </h3>
+                            <p>
+                                Fresh pies are reportedly worth crossing the
+                                desert for.
+                            </p>
+                        </div>
+                        <span class="story-arrow">↗</span>
+                    </article>
+
+                    <article class="story-row">
+                        <span class="story-index">03</span>
+                        <div>
+                            <span class="story-category">MYSTERY</span>
+                            <h3>
+                                Who keeps leaving mysterious letters at the
+                                train station?
+                            </h3>
+                            <p>
+                                Each letter contains a single drawing of a
+                                cactus.
+                            </p>
+                        </div>
+                        <span class="story-arrow">↗</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ARCHIVE SECTION -->
+            <section
+                class="tab-page archive-page"
+                id="archive"
+                role="tabpanel"
+                aria-labelledby="tab-archive"
+                hidden
+            >
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">
+                            THE HISTORICAL COLLECTION · SINCE 1887
+                        </span>
+
+                        <h2>FROM THE <span>ARCHIVES.</span></h2>
+                        <p>
+                            Old editions, forgotten faces and legendary frontier
+                            tales.
+                        </p>
+                    </div>
+
+                    <div class="section-number">PAGE 04</div>
+                </div>
+
+                <div class="archive-intro">
+                    <div class="archive-big-number">138</div>
+                    <div>
+                        <span class="section-kicker">
+                            YEARS OF FRONTIER HISTORY
+                        </span>
+
+                        <h3>Every town has a story.</h3>
+                        <p>
+                            We've collected the strange, wonderful and
+                            unbelievable stories that shaped this little corner
+                            of the world.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="archive-grid">
+                    <article class="archive-card">
+                        <div class="archive-card-art archive-art-one">
+                            <span>1887</span>
+                            <strong>THE<br />FIRST<br />EDITION</strong>
+                            <span class="archive-decoration">✦</span>
+
+                            <img src="./assets/images/card6.png" alt="" />
+                        </div>
+
+                        <div class="archive-card-info">
+                            <span>VOLUME 001</span>
+                            <h3>A newspaper is born.</h3>
+                            <p>
+                                The first printed edition of the Frontier
+                                Gazette.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="archive-card">
+                        <div class="archive-card-art archive-art-two">
+                            <span>1889</span>
+                            <strong>THE<br />GREAT<br />HEIST</strong>
+                            <span class="archive-decoration">★</span>
+
+                            <img src="./assets/images/video3.gif" alt="" />
+                        </div>
+
+                        <div class="archive-card-info">
+                            <span>VOLUME 014</span>
+                            <h3>The midnight robbery.</h3>
+                            <p>A mysterious case that remains unsolved.</p>
+                        </div>
+                    </article>
+
+                    <article class="archive-card">
+                        <div class="archive-card-art archive-art-three">
+                            <span>1891</span>
+                            <strong>THE<br />LAST<br />FRIDAY</strong>
+                            <span class="archive-decoration">✦</span>
+
+                            <img src="./assets/images/card5.png" alt="" />
+                        </div>
+
+                        <div class="archive-card-info">
+                            <span>VOLUME 027</span>
+                            <h3>Meet new dance day.</h3>
+                            <p>Twenty music bands. One party. Our choice.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="archive-footer">
+                    <span>THE PAST NEVER STAYS BURIED.</span>
+                    <span>MORE EDITIONS COMING SOON...</span>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="newspaper-footer">
+                <span>THE WANTED GAZETTE</span>
+                <span>PRINTED WITH INK, TROUBLE & A LITTLE BIT OF LUCK.</span>
+                <span>© 1887 — ALL RIGHTS RESERVED</span>
+            </footer>
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+        <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
 
         <script src="./assets/js/main.js"></script>
     </body>
