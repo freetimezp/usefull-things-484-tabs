@@ -35,6 +35,11 @@ body {
     overflow-x: hidden;
 }
 
+::selection {
+    background: var(--red-dark);
+    color: var(--paper);
+}
+
 /* =========================================
    VINTAGE NEWSPAPER SCROLLBARS
 ========================================= */
