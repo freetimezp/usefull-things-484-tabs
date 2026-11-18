@@ -23,6 +23,18 @@
     </head>
 
     <body>
+        <!-- READING PROGRESS -->
+        <div
+            class="reading-progress"
+            role="progressbar"
+            aria-label="Newspaper reading progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+        >
+            <span class="reading-progress-fill"></span>
+        </div>
+
         <div class="bg"></div>
 
         <main class="newspaper">
@@ -53,6 +65,76 @@
                     <span>MONDAY, NOVEMBER 16, 1887</span>
                 </div>
             </header>
+
+            <!-- NEWSPAPER MARQUEE -->
+            <div
+                class="gazette-marquee"
+                aria-label="Latest newspaper headlines"
+            >
+                <div class="marquee-label">
+                    <span class="marquee-dot"></span>
+                    LATEST EDITION
+                </div>
+
+                <div class="marquee-window">
+                    <div class="marquee-track">
+                        <div class="marquee-content">
+                            <button
+                                class="marquee-link marquee-highlight"
+                                type="button"
+                                data-tab="front-page"
+                            >
+                                EXTRA! EXTRA!
+                            </button>
+
+                            <span class="marquee-star">✦</span>
+
+                            <button
+                                class="marquee-link"
+                                type="button"
+                                data-tab="wanted"
+                            >
+                                OUTLAW SPOTTED NEAR DUSTY CREEK
+                            </button>
+
+                            <span class="marquee-star">✦</span>
+
+                            <button
+                                class="marquee-link"
+                                type="button"
+                                data-tab="wanted"
+                            >
+                                REWARD INCREASED TO $5,000
+                            </button>
+
+                            <span class="marquee-star">✦</span>
+
+                            <button
+                                class="marquee-link"
+                                type="button"
+                                data-tab="stories"
+                            >
+                                SHERIFF ISSUES PUBLIC WARNING
+                            </button>
+
+                            <span class="marquee-star">✦</span>
+                        </div>
+
+                        <div class="marquee-content" aria-hidden="true">
+                            <span class="marquee-highlight">EXTRA! EXTRA!</span>
+                            <span class="marquee-star">✦</span>
+                            OUTLAW SPOTTED NEAR DUSTY CREEK
+                            <span class="marquee-star">✦</span>
+                            REWARD INCREASED TO $5,000
+                            <span class="marquee-star">✦</span>
+                            SHERIFF ISSUES PUBLIC WARNING
+                            <span class="marquee-star">✦</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="marquee-edition">NO. 0484</div>
+            </div>
 
             <!-- NAVIGATION -->
 
@@ -175,7 +257,7 @@
                             <div class="character-sun"></div>
                             <div class="character-shadow"></div>
 
-                            <img src="./assets/images/card1.png" alt="" />
+                            <img src="./assets/images/robber1.png" alt="" />
 
                             <div class="character-label">
                                 <span>THE OUTLAW</span>
@@ -198,7 +280,7 @@
                                 your horses close.
                             </p>
 
-                            <a href="#" class="read-link">
+                            <a href="#" class="read-link" data-article="wanted">
                                 READ THE FULL REPORT
                                 <span>↗</span>
                             </a>
@@ -241,6 +323,19 @@
                                 <span>REWARD</span>
                                 <strong>$250</strong>
                             </div>
+                        </article>
+
+                        <article class="sidebar-story">
+                            <h3>
+                                Villains are once again threatening to rob the
+                                central bank
+                            </h3>
+
+                            <div class="sidebar-img-wrap">
+                                <img src="./assets/images/video3.gif" alt="" />
+                            </div>
+
+                            <span class="story-author"> Press center FBR </span>
                         </article>
 
                         <article class="weather-story">
@@ -319,6 +414,10 @@
                             Dangerous characters. Unfinished business. Generous
                             rewards.
                         </p>
+
+                        <a href="#" class="read-link" data-article="sheriff">
+                            READ FULL STORY →
+                        </a>
                     </div>
 
                     <div class="section-number">PAGE 02</div>
@@ -339,8 +438,8 @@
 
                         <div class="poster-art">
                             <span class="poster-sun"></span>
-                            <div class="poster-person person-one">
-                                <img src="./assets/images/card2.png" alt="" />
+                            <div class="poster-person">
+                                <img src="./assets/images/robber2.png" alt="" />
                             </div>
                             <span class="poster-question">?</span>
                         </div>
@@ -366,10 +465,10 @@
                             <span>AT LARGE</span>
                         </div>
 
-                        <div class="poster-art outlaw-art">
+                        <div class="poster-art poster-two">
                             <span class="poster-sun"></span>
-                            <div class="poster-person person-two">
-                                <img src="./assets/images/card3.png" alt="" />
+                            <div class="poster-person">
+                                <img src="./assets/images/band.png" alt="" />
                             </div>
                         </div>
 
@@ -394,10 +493,13 @@
                             <span>VERY DANGEROUS</span>
                         </div>
 
-                        <div class="poster-art poster-art-blue">
+                        <div class="poster-art poster-three">
                             <span class="poster-sun"></span>
-                            <div class="poster-person person-three">
-                                <img src="./assets/images/card4.png" alt="" />
+                            <div class="poster-person">
+                                <img
+                                    src="./assets/images/catwoman.png"
+                                    alt=""
+                                />
                             </div>
                         </div>
 
@@ -411,6 +513,63 @@
                             <div class="poster-reward">
                                 <span>REWARD</span>
                                 <strong>$2,400</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="wanted-card">
+                        <div class="poster-top">
+                            <span>NO. 004</span>
+                            <span>HIGH PRIORITY</span>
+                        </div>
+
+                        <div class="poster-art poster-four">
+                            <span class="poster-sun"></span>
+                            <div class="poster-person">
+                                <img src="./assets/images/robber3.png" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="poster-bottom">
+                            <span class="poster-kicker">WANTED</span>
+                            <h3>THE MAD BANDIT</h3>
+                            <p>
+                                A hat, a mustache, and revolvers. Who has seen
+                                him?
+                            </p>
+
+                            <div class="poster-reward">
+                                <span>REWARD</span>
+                                <strong>$2,750</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="wanted-card">
+                        <div class="poster-top">
+                            <span>NO. 005</span>
+                            <span>LOW PRIORITY</span>
+                        </div>
+
+                        <div class="poster-art poster-five">
+                            <span class="poster-sun"></span>
+                            <div class="poster-person">
+                                <img
+                                    src="./assets/images/drinkstyle.png"
+                                    alt=""
+                                />
+                            </div>
+                            <span class="poster-question">🧾</span>
+                        </div>
+
+                        <div class="poster-bottom">
+                            <span class="poster-kicker">WANTED</span>
+                            <h3>THE DRUNKEN MASTER</h3>
+                            <p>They drank all the beer and didn’t pay.</p>
+
+                            <div class="poster-reward">
+                                <span>REWARD</span>
+                                <strong>$150</strong>
                             </div>
                         </div>
                     </article>
@@ -432,9 +591,9 @@
             >
                 <div class="section-heading">
                     <div>
-                        <span class="section-kicker"
-                            >FROM OUR REPORTERS · EDITION 0484</span
-                        >
+                        <span class="section-kicker">
+                            FROM OUR REPORTERS · EDITION 0484
+                        </span>
                         <h2>STRANGE <span>HAPPENINGS.</span></h2>
                         <p>Little towns. Big trouble. Stories worth telling.</p>
                     </div>
@@ -444,9 +603,9 @@
 
                 <article class="main-story">
                     <div class="main-story-copy">
-                        <span class="story-category"
-                            >EXCLUSIVE REPORT · DUSTY CREEK</span
-                        >
+                        <span class="story-category">
+                            EXCLUSIVE REPORT · DUSTY CREEK
+                        </span>
 
                         <h3>
                             The night the entire town heard a piano playing by
@@ -458,6 +617,10 @@
                             empty, the doors were locked, and yet the old piano
                             played a tune nobody in town recognized.
                         </p>
+
+                        <a href="#" class="read-link" data-article="piano">
+                            READ FULL STORY →
+                        </a>
 
                         <div class="story-byline">
                             <span>BY M. CARTER</span>
@@ -474,9 +637,9 @@
                         </div>
                         <span class="music-note note-one">♪</span>
                         <span class="music-note note-two">♫</span>
-                        <span class="scene-caption"
-                            >12:00 AM · THE OLD SALOON</span
-                        >
+                        <span class="scene-caption">
+                            12:00 AM · THE OLD SALOON
+                        </span>
                     </div>
                 </article>
 
@@ -530,6 +693,7 @@
             </section>
 
             <!-- ARCHIVE SECTION -->
+
             <section
                 class="tab-page archive-page"
                 id="archive"
@@ -537,94 +701,105 @@
                 aria-labelledby="tab-archive"
                 hidden
             >
-                <div class="section-heading">
+                <div class="archive-header">
                     <div>
-                        <span class="section-kicker">
-                            THE HISTORICAL COLLECTION · SINCE 1887
-                        </span>
-
-                        <h2>FROM THE <span>ARCHIVES.</span></h2>
+                        <span class="archive-kicker"
+                            >THE HISTORICAL COLLECTION · EST. 1884</span
+                        >
+                        <h2>THE ARCHIVE</h2>
                         <p>
-                            Old editions, forgotten faces and legendary frontier
-                            tales.
+                            Stories, rumors, and reports from across the Dakota
+                            territory.
                         </p>
                     </div>
 
-                    <div class="section-number">PAGE 04</div>
-                </div>
-
-                <div class="archive-intro">
-                    <div class="archive-big-number">138</div>
-                    <div>
-                        <span class="section-kicker">
-                            YEARS OF FRONTIER HISTORY
-                        </span>
-
-                        <h3>Every town has a story.</h3>
-                        <p>
-                            We've collected the strange, wonderful and
-                            unbelievable stories that shaped this little corner
-                            of the world.
-                        </p>
+                    <div class="archive-edition">
+                        <span>GAZETTE</span>
+                        <strong>0484</strong>
+                        <small>THE COLLECTION</small>
                     </div>
                 </div>
 
-                <div class="archive-grid">
-                    <article class="archive-card">
-                        <div class="archive-card-art archive-art-one">
-                            <span>1887</span>
-                            <strong>THE<br />FIRST<br />EDITION</strong>
-                            <span class="archive-decoration">✦</span>
+                <div class="archive-tools">
+                    <label class="archive-search">
+                        <span class="archive-search-icon" aria-hidden="true"
+                            >⌕</span
+                        >
+                        <span class="visually-hidden"
+                            >Search newspaper articles</span
+                        >
+                        <input
+                            type="search"
+                            id="archive-search"
+                            placeholder="Search the archives..."
+                            autocomplete="off"
+                        />
+                        <span class="archive-search-shortcut">SEARCH</span>
+                    </label>
 
-                            <img src="./assets/images/card6.png" alt="" />
-                        </div>
-
-                        <div class="archive-card-info">
-                            <span>VOLUME 001</span>
-                            <h3>A newspaper is born.</h3>
-                            <p>
-                                The first printed edition of the Frontier
-                                Gazette.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="archive-card">
-                        <div class="archive-card-art archive-art-two">
-                            <span>1889</span>
-                            <strong>THE<br />GREAT<br />HEIST</strong>
-                            <span class="archive-decoration">★</span>
-
-                            <img src="./assets/images/video3.gif" alt="" />
-                        </div>
-
-                        <div class="archive-card-info">
-                            <span>VOLUME 014</span>
-                            <h3>The midnight robbery.</h3>
-                            <p>A mysterious case that remains unsolved.</p>
-                        </div>
-                    </article>
-
-                    <article class="archive-card">
-                        <div class="archive-card-art archive-art-three">
-                            <span>1891</span>
-                            <strong>THE<br />LAST<br />FRIDAY</strong>
-                            <span class="archive-decoration">✦</span>
-
-                            <img src="./assets/images/card5.png" alt="" />
-                        </div>
-
-                        <div class="archive-card-info">
-                            <span>VOLUME 027</span>
-                            <h3>Meet new dance day.</h3>
-                            <p>Twenty music bands. One party. Our choice.</p>
-                        </div>
-                    </article>
+                    <div
+                        class="archive-filters"
+                        role="group"
+                        aria-label="Filter articles by category"
+                    >
+                        <button
+                            class="archive-filter is-active"
+                            type="button"
+                            data-filter="all"
+                            aria-pressed="true"
+                        >
+                            ALL STORIES
+                        </button>
+                        <button
+                            class="archive-filter"
+                            type="button"
+                            data-filter="BREAKING NEWS"
+                            aria-pressed="false"
+                        >
+                            BREAKING NEWS
+                        </button>
+                        <button
+                            class="archive-filter"
+                            type="button"
+                            data-filter="TOWN STORIES"
+                            aria-pressed="false"
+                        >
+                            TOWN STORIES
+                        </button>
+                        <button
+                            class="archive-filter"
+                            type="button"
+                            data-filter="PUBLIC NOTICE"
+                            aria-pressed="false"
+                        >
+                            PUBLIC NOTICE
+                        </button>
+                    </div>
                 </div>
 
-                <div class="archive-footer">
-                    <span>THE PAST NEVER STAYS BURIED.</span>
-                    <span>MORE EDITIONS COMING SOON...</span>
+                <div class="archive-results">
+                    <span>THE EDITOR'S SELECTION</span>
+                    <span id="archive-count" aria-live="polite"
+                        >03 ARTICLES FOUND</span
+                    >
+                </div>
+
+                <div class="archive-grid" id="archive-grid">
+                    <!-- Article cards are generated from newspaperArticles in JavaScript -->
+                </div>
+
+                <div class="archive-empty" id="archive-empty" hidden>
+                    <span class="archive-empty-mark">?</span>
+                    <h3>NO STORIES FOUND</h3>
+                    <p>Try another keyword or choose a different section.</p>
+                    <button type="button" id="archive-reset">
+                        CLEAR SEARCH & FILTERS
+                    </button>
+                </div>
+
+                <div class="archive-footer-note">
+                    <span>END OF THE COLLECTION</span>
+                    <span>THE SOUTH DAKOTA GAZETTE</span>
                 </div>
             </section>
 
@@ -635,6 +810,112 @@
                 <span>© 1887 — ALL RIGHTS RESERVED</span>
             </footer>
         </main>
+
+        <!-- =========================================
+            ARTICLE READER MODAL
+        ========================================= -->
+
+        <dialog class="article-dialog" aria-labelledby="article-title">
+            <div class="article-dialog-card" data-lenis-prevent>
+                <div class="article-dialog-top">
+                    <span class="article-dialog-label">
+                        THE SOUTH DAKOTA GAZETTE
+                    </span>
+
+                    <button
+                        class="article-close"
+                        type="button"
+                        aria-label="Close article"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="article-dialog-content">
+                    <div class="article-meta">
+                        <span class="article-category">BREAKING NEWS</span>
+                        <span>•</span>
+                        <span>ISSUE NO. 0484</span>
+                    </div>
+
+                    <h2 id="article-title">WANTED DEAD OR ALIVE</h2>
+
+                    <p class="article-subtitle">
+                        The notorious outlaw returns to the Dakota territory.
+                        Sheriff warns residents to stay alert.
+                    </p>
+
+                    <div class="article-byline">
+                        <span>BY JONATHAN WEST</span>
+                        <span>5 MIN READ</span>
+                    </div>
+
+                    <div class="article-illustration">
+                        <div class="article-illustration-inner">
+                            <span class="illustration-stamp"
+                                >SPECIAL REPORT</span
+                            >
+                            <span class="illustration-wanted">WANTED</span>
+                            <span class="illustration-name">THE OUTLAW</span>
+                            <span class="illustration-reward"
+                                >$5,000 REWARD</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="article-body">
+                        <p class="article-lead">
+                            <span class="drop-cap">A</span>
+                            quiet morning in the Dakota territory was
+                            interrupted yesterday when reports emerged of a
+                            notorious outlaw spotted near Dusty Creek.
+                        </p>
+
+                        <p>
+                            Local residents reported seeing a lone rider
+                            approaching the settlement shortly before sunset.
+                            Witnesses described a mysterious figure wearing a
+                            dark coat and a wide-brimmed hat, traveling on a
+                            powerful black horse.
+                        </p>
+
+                        <p>
+                            The sheriff's office has confirmed that the
+                            individual matches the description of a wanted
+                            criminal believed to be responsible for several
+                            robberies across the region.
+                        </p>
+
+                        <h3>THE SHERIFF'S WARNING</h3>
+
+                        <p>
+                            Authorities are asking citizens to remain cautious
+                            and report any suspicious activity. Residents are
+                            strongly advised not to approach the suspect.
+                        </p>
+
+                        <blockquote>
+                            "We intend to bring this individual to justice.
+                            Anyone with information should contact the sheriff's
+                            office."
+                            <span>— SHERIFF WILLIAM CARTER</span>
+                        </blockquote>
+
+                        <p>
+                            The reward has now been increased to $5,000. Further
+                            information will be published as the investigation
+                            develops.
+                        </p>
+                    </div>
+
+                    <div class="article-ending">
+                        <span>— END OF REPORT —</span>
+                        <span>THE SOUTH DAKOTA GAZETTE</span>
+                    </div>
+                </div>
+            </div>
+        </dialog>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
